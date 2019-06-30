@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Existing Reports</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content-background">
+  <ion-buttons end>
+    <button ion-button (click)="goHome()">Home</button>
+  </ion-buttons>
+  <ion-list>
+  	<ion-item class="content-background" *ngFor="let report of reports"><span (click)="viewReport(report)"><strong>{{report.title}}</strong><br>{{report.id}}</span>
+    <ion-buttons end>
+      <button ion-button color="secondary" icon-only (click)="editReport(report)"><ion-icon name="build"></ion-icon></button>
+      <button ion-button color="danger" icon-only (click)="removeReport(report)"><ion-icon name="trash"></ion-icon></button>
+    </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

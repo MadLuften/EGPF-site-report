@@ -1,0 +1,83 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Report</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content-background">
+	<ion-list>
+
+		<ion-item>
+			<ion-label floating>Title</ion-label>
+			<ion-input type ="text" [(ngModel)]="title"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='aircraft'">
+			<ion-label floating>Aircraft Model (If known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="aircraftModel"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='aircraft'">
+			<ion-label floating>Ramp or Gate No (if known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="gate"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='ground'">
+			<ion-label floating>Ramp or Gate No (if known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="rampNo"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='interior'">
+			<ion-label floating>Room or Area No</ion-label>
+			<ion-input type ="text" [(ngModel)]="roomNo"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='interior'">
+			<ion-label floating>Is this a Health Hazard? (Y/N)</ion-label>
+			<ion-input type ="text" [(ngModel)]="healthHazard"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='runway'">
+			<ion-label floating>Runway (RW) or Taxiway (TW)</ion-label>
+			<ion-input type ="text" [(ngModel)]="runOrTaxi"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='runway'">
+			<ion-label floating>If RW, area (NE end, SW end or Middle)</ion-label>
+			<ion-input type ="text" [(ngModel)]="runwayArea"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='runway'">
+			<ion-label floating>If TW, Taxiway No</ion-label>
+			<ion-input type ="text" [(ngModel)]="taxiNo"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='vehicle'">
+			<ion-label floating>Vehicle Type (if known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="vehicleType"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="reportType==='vehicle'">
+			<ion-label floating>Vehicle ID/Reg (if known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="vehicleID"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Issue</ion-label>
+			<ion-input type ="text" [(ngModel)]="issue"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Additional Comments</ion-label>
+			<ion-textarea rows="5" type ="text" [(ngModel)]="comments"></ion-textarea>
+		</ion-item>
+
+	</ion-list>
+
+	<button ion-button class="report-button" color="secondary" (click)="saveReport()">Save</button>
+	<button ion-button class="report-button" color="danger" (click)="cancel()">Cancel</button>
+
+</ion-content>

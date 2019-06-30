@@ -1,0 +1,110 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Report Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content-background">
+	<ion-list>
+
+		<ion-card class="card-background">
+			<ion-card-content>
+				<img [src]="imgData" />
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card class="card-background">
+			<ion-card-content>
+				<strong>{{title}}</strong>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="aircraftModel" class="card-background">
+			<ion-card-content>
+				Aircraft: {{aircraftModel}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="rampNo" class="card-background">
+			<ion-card-content>
+				Ramp/Gate: {{rampNo}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="gate" class="card-background">
+			<ion-card-content>
+				Ramp/Gate: {{gate}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="roomNo" class="card-background">
+			<ion-card-content>
+				Room No:{{roomNo}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="healthHazard" class="card-background">
+			<ion-card-content>
+				Health Hazard: {{healthHazard}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="runOrTaxi" class="card-background">
+			<ion-card-content>
+				Runway or Taxi: {{runOrTaxi}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="runwayArea" class="card-background">
+			<ion-card-content>
+				Runway Area: {{runwayArea}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="taxiNo" class="card-background">
+			<ion-card-content>
+				Taxiway No: {{taxiNo}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="vehicleType" class="card-background">
+			<ion-card-content>
+				Vehicle: {{vehicleType}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card *ngIf="vehicleID" class="card-background">
+			<ion-card-content>
+				Vehicle Reg: {{vehicleID}}
+			</ion-card-content>
+		</ion-card>
+
+		<!--<ion-card class="card-background">
+			<ion-card-content>
+				Latitude: {{lat}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card class="card-background">
+			<ion-card-content>
+				Longitude: {{long}}
+			</ion-card-content>
+		</ion-card>-->
+
+		<ion-card class="card-background">
+			<ion-card-content>
+				Issue: {{issue}}
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card class="card-background">
+			<ion-card-content>
+				Comments: {{comments}}
+			</ion-card-content>
+		</ion-card>
+
+	</ion-list>
+</ion-content>

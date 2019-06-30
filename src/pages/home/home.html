@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      EGPF Site Report
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="content-background">
+
+	<img class="plane-img" src="../../assets/imgs/plane.jpg">
+
+	<button ion-button class="home-button" (click)="createReport()">Create New Report</button>
+	<button ion-button class="home-button" (click)="viewExistingReports()">View Existing Reports</button>
+	<button ion-button class="home-button" (click)="toggleTorch()">Toggle Torch</button>
+	<button ion-button class="home-button" (click)="openCompass()">Compass</button>
+	<button ion-button clear block class="home-button" (click)="openAbout()">About Us</button>
+	<button ion-button clear block class="home-button" (click)="openContact()">Contact</button>
+  
+</ion-content>
+
+<ion-footer>
+	<ion-label><strong>Copyright &copy; Craig Macgillivray B00317241</strong></ion-label>
+</ion-footer>

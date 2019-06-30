@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Vehicle Report</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+
+		<ion-item>
+			<ion-label floating>Title</ion-label>
+			<ion-input type ="text" [(ngModel)]="title"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Vehicle Type (if known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="vehicleType"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Vehicle ID/Reg (if known)</ion-label>
+			<ion-input type ="text" [(ngModel)]="vehicleID"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Issue</ion-label>
+			<ion-input type ="text" [(ngModel)]="issue"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Additional Comments</ion-label>
+			<ion-textarea rows="5" type ="text" [(ngModel)]="comments"></ion-textarea>
+		</ion-item>
+
+	</ion-list>
+
+	<button ion-button class="report-button" color="secondary" (click)="saveReport()">Save</button>
+	<button ion-button class="report-button" color="danger" (click)="cancel()">Cancel</button>
+
+</ion-content>

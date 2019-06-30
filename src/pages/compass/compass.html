@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Compass</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content-background">
+	
+	<ion-card>
+		<ion-card-content class="heading">
+      <strong>Heading {{ heading | slice:0:5}}</strong>
+		</ion-card-content>
+	</ion-card>
+  
+  <button ion-button (click)="useCompass()" class="report-button">Start Compass</button>
+
+</ion-content>
